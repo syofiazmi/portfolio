@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "img": "banua-travel",
+      "title": "Banua Travel",
+      "desc": "Banua Travel is travel agency site.",
+      "tech": "HTML, CSS, Js, React Js"
+    },
+    {
+      "id": 2,
+      "img": "banua-travel",
+      "title": "Banua Travel",
+      "desc": "Banua Travel is travel agency site.",
+      "tech": "HTML, CSS, Js, React Js"
+    }
+  ]
+}

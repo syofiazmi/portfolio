@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Quicksand:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header.navbar-container {
+  width: 100vw;
+  position: sticky;
+  padding: 0.5rem;
+  top: 0;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+header.navbar-container .nav-list ul {
+  display: flex;
+  justify-content: first baseline;
+  gap: 1rem 2rem;
+}
+
+header.navbar-container .nav-list ul li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list ul li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list ul li a.nav-home {
+  color: #f45050;
+}
+
+header.navbar-container .nav-list ul li a:hover {
+  color: #f45050;
+  font-weight: bold;
+}
+
+main .home-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .home-container .profile h1.name-line {
+  color: #f45050;
+  font-size: 2rem;
+  margin: 0;
+}
+
+main .home-container .profile h1.name-line span.my-name {
+  color: black;
+  font-size: 3rem;
+}
+
+main .home-container .profile h2.headline {
+  color: rgb(100, 116, 139);
+  margin: 0;
+}
+
+main .home-container .profile button {
+  background-color: #f45050;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin: 3rem 0;
+  border-radius: 2rem;
+  border-style: none;
+  transition: all 0.2s ease-in-out;
+}
+
+main .home-container .profile button:hover {
+  cursor: pointer;
+  background-color: #fa7070;
+}
+
+main .photo-image img {
+  width: 27rem;
+}
+
+main .about-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+main .about-container .about {
+  margin: 0 5rem;
+  width: 50%;
+}
+
+main .about-container .about h4 {
+  font-size: 2rem;
+}
+
+main .about-container .about p {
+  font-size: 1.5rem;
+}
+
+main .about-container .experiences {
+  margin: 0 5rem;
+  width: 50%;
+}
+
+main .about-container .experiences h4 {
+  font-size: 2rem;
+}
+
+main .about-container .experiences p {
+  font-size: 1.5rem;
+}
+
+main .portfolio-container {
+  height: auto;
+  width: 100vw;
+  background-color: #3c486b;
+  padding: 2rem 2rem 8rem 2rem;
+}
+
+main .portfolio-container h2 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  justify-content: center;
+  color: white;
+}
+
+main .portfolio-container .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+
+main .portfolio-container .portfolio-list .card {
+  width: 25%;
+  background-color: white;
+  border-radius: .5rem;
+}
+
+
+main .portfolio-container .portfolio-list .card .port-img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+main .portfolio-container .portfolio-list .card .port-img img {
+  object-fit: cover;
+  transition: 2s ease;
+  width: 100%;
+ 
+}
+
+main .portfolio-container .portfolio-list .card .port-img img:hover {
+ 
+  transform: scale(1.1);
+}
+
+
+main .portfolio-container .portfolio-list .card .port-info {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.icon {
+  margin: 0rem 2rem 2rem 0;
+}
