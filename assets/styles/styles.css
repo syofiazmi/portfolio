@@ -17,6 +17,7 @@ header.navbar-container {
   top: 0;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
+  z-index: 1000;
 }
 
 header.navbar-container .nav-list ul {
