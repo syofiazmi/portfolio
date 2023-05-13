@@ -11,19 +11,21 @@ body {
 }
 
 header.navbar-container {
-  width: 100vw;
-  position: sticky;
-  padding: 0.5rem;
-  top: 0;
+  position: fixed;
+  width: 100%;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
 }
 
 header.navbar-container .nav-list ul {
   display: flex;
   justify-content: first baseline;
-  gap: 1rem 2rem;
+  gap: 0 3rem;
 }
 
 header.navbar-container .nav-list ul li {
@@ -38,14 +40,20 @@ header.navbar-container .nav-list ul li a {
   transition: all 0.2s ease-in-out;
 }
 
-header.navbar-container .nav-list ul li a.nav-home {
+header.navbar-container a.nav-home {
   color: #f45050;
-  margin-right: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 header.navbar-container .nav-list ul li a:hover {
   color: #f45050;
   font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 main .home-container {
@@ -74,19 +82,18 @@ main .home-container .profile h2.headline {
 
 main .home-container .profile button {
   background-color: #f45050;
-  color: white;
   padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
   margin: 3rem 0;
   border-radius: 2rem;
   border-style: none;
   transition: all 0.1s ease-in-out;
 }
 
-main .home-container .profile button:hover {
-  cursor: pointer;
-  color: #89b0d9;
+main .home-container .profile button a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
 }
 
 main .photo-image img {
@@ -105,8 +112,6 @@ main .about-container .about {
   /* margin: 3rem 5rem; */
   width: 50%;
   padding: 6rem 6rem;
-
-  
 }
 
 main .about-container .about h4 {
@@ -166,16 +171,13 @@ main .about-container .experiences .timeline .outer .card .info ul.exp-desc {
 
 main .about-container .experiences .timeline .outer .card .info ul.exp-desc li {
   list-style-type: none;
-  
 }
-
 
 main .portfolio-container {
   height: auto;
   width: 100vw;
   background-color: #3c486b;
 }
-
 
 main .portfolio-container .port-title-container {
   display: flex;
@@ -374,6 +376,317 @@ footer .copyright {
   padding-top: 1rem;
 }
 
-
 /* Media Query ===============================> */
 
+@media screen and (max-width: 650px) {
+  header.navbar-container {
+    position: fixed;
+    z-index: 1000;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header.navbar-container a.nav-home {
+    font-size: 1.5rem;
+  }
+
+  header.navbar-container .menu-toggle {
+    display: block;
+  }
+
+  header nav.nav-list {
+    position: absolute;
+    width: 100%;
+    background-color: #3c486b;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+    margin-top: 0.4rem;
+  }
+
+  header.navbar-container nav.nav-list.active {
+    left: 0;
+  }
+
+  header nav.nav-list ul {
+    display: block;
+    text-align: center;
+  }
+
+  header.navbar-container nav.nav-list ul li a {
+    list-style-type: none;
+    color: white;
+  }
+
+  main .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    justify-content: start;
+  }
+
+  main .home-container .profile {
+    margin-top: 5rem;
+  }
+
+  main .home-container .profile h1.name-line {
+    font-size: 1.5rem;
+  }
+
+  main .home-container .profile h1.name-line span.my-name {
+    font-size: 2rem;
+  }
+
+  main .home-container .photo-image img {
+    width: 100%;
+  }
+
+  main .home-container .profile button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  main .home-container .profile button a {
+    font-size: 0.8rem;
+  }
+
+  main .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0 4rem 4rem 4rem;
+  }
+
+  main .about-container .about {
+    margin-top: 10rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  main .about-container .experiences {
+    margin: 0;
+    width: 100%;
+  }
+
+  main .portfolio-container {
+    padding: 0 4rem 4rem 4rem;
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list .port-card {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  main .skill-container {
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  main .skill-container .skill-title {
+    margin-bottom: 3rem;
+  }
+
+  main .skill-container .skill {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  header.navbar-container {
+    position: fixed;
+    z-index: 1000;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header.navbar-container a.nav-home {
+    font-size: 1.5rem;
+  }
+
+  header.navbar-container .menu-toggle {
+    display: block;
+  }
+
+  header nav.nav-list {
+    position: absolute;
+    width: 100%;
+    background-color: #3c486b;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+    margin-top: 0.4rem;
+  }
+
+  header.navbar-container nav.nav-list.active {
+    left: 0;
+  }
+
+  header nav.nav-list ul {
+    display: block;
+    text-align: center;
+  }
+
+  header.navbar-container nav.nav-list ul li a {
+    list-style-type: none;
+    color: white;
+  }
+
+  main .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    justify-content: start;
+  }
+
+  main .home-container .profile {
+    margin-top: 5rem;
+  }
+
+  main .home-container .profile h1.name-line {
+    font-size: 1.5rem;
+  }
+
+  main .home-container .profile h1.name-line span.my-name {
+    font-size: 2rem;
+  }
+
+  main .home-container .photo-image img {
+    width: 100%;
+  }
+
+  main .home-container .profile button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  main .home-container .profile button a {
+    font-size: 0.8rem;
+  }
+
+  main .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 4rem 4rem 4rem 4rem;
+  }
+
+  main .about-container .about {
+    margin-top: 10rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  main .about-container .experiences {
+    margin: 0;
+    width: 100%;
+  }
+
+  main .portfolio-container {
+    padding: 0 4rem 4rem 4rem;
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list .port-card {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  main .skill-container {
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  main .skill-container .skill-title {
+    margin-bottom: 3rem;
+  }
+
+  main .skill-container .skill {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  main .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    justify-content: start;
+  }
+
+  main .home-container .profile {
+    margin-top: 5rem;
+  }
+
+  main .home-container .photo-image img {
+    width: 100%;
+  }
+
+  main .home-container .profile button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  main .home-container .profile button a {
+    font-size: 0.8rem;
+  }
+
+  main .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 4rem 4rem 4rem 4rem;
+  }
+
+  main .about-container .about {
+    margin-top: 35rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  main .about-container .experiences {
+    margin: 0;
+    width: 100%;
+  }
+
+  main .portfolio-container {
+    padding: 0 4rem 4rem 4rem;
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list {
+    margin: 0;
+  }
+
+  main .portfolio-container .portfolio-list .port-card {
+    margin: 0;
+    width: 100%;
+  }
+
+  main .skill-container {
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  main .skill-container .skill-title {
+    margin-bottom: 3rem;
+  }
+
+  main .skill-container .skill {
+    padding: 0;
+  }
+}
